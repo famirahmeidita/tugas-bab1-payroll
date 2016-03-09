@@ -12,7 +12,7 @@ package mainstudent;
 import java.util.Calendar;
 public class student {
 private String name;
-private String NIK;
+private String NIK,masuk,keluar;
 private int gaji;
 private int Tunjangan;
 private int denda ;
@@ -23,6 +23,8 @@ name = "";
 NIK = "";
 gaji = 0;
 }
+
+
 public student(String n, String a, int g){
 name = n;
 NIK = a;
@@ -33,6 +35,13 @@ public void setName(String n){
 }
 public void setNIK(String a){
 NIK = a;
+}
+public void setmasuk (String m){
+    masuk= m;
+    
+}
+public void setkeluar(String p){
+    keluar = p;
 }
 public void setgaji(int g){
 gaji = g;
@@ -71,12 +80,10 @@ System.out.println(NIK+","+name+","+gaji+","+Tunjangan+","+bonus+","+denda);
 }
 public void displayMessage2(){
     Calendar now= Calendar.getInstance ();
-        System.out.println(NIK+","+now.get(Calendar.YEAR)+"-"+(now.get(Calendar.MONTH)+1)+"-"
-        +now.get(Calendar.HOUR)+":"+now.get(Calendar.MINUTE));
+        System.out.println(NIK+","+now.get(Calendar.YEAR)+"-"+(now.get(Calendar.MONTH)+1)+masuk+","+keluar);
         
 
 }
-        
 
-}
- 
+}        
+
